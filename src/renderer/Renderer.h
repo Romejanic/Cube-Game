@@ -1,11 +1,8 @@
 #ifndef RENDERER_RENDERER_H_
 #define RENDERER_RENDERER_H_
 
-#include <OpenGL/gl.h>
-
 #include "../world/World.h"
 #include "WorldRenderer.h"
-#include "../gl/Shader.h"
 #include "../camera/Camera.h"
 #include "Window.h"
 

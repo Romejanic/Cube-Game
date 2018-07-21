@@ -1,6 +1,8 @@
-#include "Chunk.h"
 #include <iostream>
 #include <vector>
+
+#include "../gl.h"
+#include "Chunk.h"
 
 int Chunk::chunkUpdates = 0;
 

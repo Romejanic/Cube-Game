@@ -5,6 +5,7 @@
 
 #include "Shader.h"
 #include "../Utils.h"
+#include "../gl.h"
 
 const char* Shader::getName() {
 	return this->name;

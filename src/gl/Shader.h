@@ -2,7 +2,7 @@
 #define GL_SHADER_H_
 
 #include <map>
-#include <OpenGL/gl.h>
+#include "../gl.h"
 
 class Shader {
 private:
