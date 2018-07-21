@@ -30,5 +30,6 @@ int main() {
 
 	renderer.destroy();
 	win.destroy();
+  world.destroy();
 	return 0;
 }
