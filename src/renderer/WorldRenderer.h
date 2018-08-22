@@ -12,12 +12,12 @@
 class WorldRenderer {
 private:
 	int xChunks, zChunks;
-	World world;
+	World* world;
 	Shader shader;
 	std::vector<Chunk> chunks;
 
 public:
-	void init(const World& world);
+	void init(World* world);
 	void render(Camera camera);
 	void destroy();
 

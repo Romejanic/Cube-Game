@@ -12,7 +12,7 @@ private:
 	float lastFpsCheck;
 
 public:
-	void init(const World& world);
+	void init(World* world);
 	void render(Camera camera, Window window);
 	void destroy();
 };

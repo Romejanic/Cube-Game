@@ -1,14 +1,14 @@
 #include "WorldRenderer.h"
 #include <iostream>
 
-void WorldRenderer::init(const World& world) {
+void WorldRenderer::init(World* world) {
 	this->world   = world;
-	this->xChunks = world.getWidth() / CHUNK_WIDTH;
-	this->zChunks = world.getDepth() / CHUNK_DEPTH;
+	this->xChunks = world->getWidth() / CHUNK_WIDTH;
+	this->zChunks = world->getDepth() / CHUNK_DEPTH;
 
 	for(int x = 0; x < this->xChunks; x++) {
 		for(int z = 0; z < this->zChunks; z++) {
-			Chunk chunk; chunk.init(x, z, world);
+			Chunk chunk; chunk.init(x, z, *world);
 			this->chunks.push_back(chunk);
 		}
 	}
