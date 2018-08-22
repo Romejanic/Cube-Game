@@ -17,7 +17,7 @@ private:
 	std::vector<Chunk> chunks;
 
 public:
-	void init(World world);
+	void init(const World& world);
 	void render(Camera camera);
 	void destroy();
 

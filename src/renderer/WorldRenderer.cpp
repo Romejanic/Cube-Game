@@ -1,7 +1,7 @@
 #include "WorldRenderer.h"
 #include <iostream>
 
-void WorldRenderer::init(World world) {
+void WorldRenderer::init(const World& world) {
 	this->world   = world;
 	this->xChunks = world.getWidth() / CHUNK_WIDTH;
 	this->zChunks = world.getDepth() / CHUNK_DEPTH;
