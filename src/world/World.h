@@ -13,9 +13,12 @@ private:
 
 	// debug only
 	void checkBlockBounds(int x, int y, int z) const {
-		assert(x >= 0 && x < wWidth);
-		assert(y >= 0 && y < wHeight);
-		assert(z >= 0 && z < wDepth);
+		assert(x >= 0);
+		assert(y >= 0);
+		assert(z >= 0);
+		assert(x < wWidth);
+		assert(y < wHeight);
+		assert(z < wDepth);
 	};
 
 public:

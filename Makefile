@@ -1,5 +1,5 @@
 CXX?=clang
-CXXFLAGS?=-Wall -std=c++11
+CXXFLAGS?=-Wall -std=c++11 -g
 
 LIBS=
 BINARY_NAME=cubegame
@@ -34,7 +34,7 @@ src/world/World.cpp
 OBJS := $(SRCS:%.cpp=%.o)
 
 main: $(OBJS)
-	$(CXX) -o $(BINARY_NAME) $(OBJS) $(LIBS)
+	$(CXX) $(CXXFLAGS) -o $(BINARY_NAME) $(OBJS) $(LIBS)
 
 $(OBJS): %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c -o $@ $<
