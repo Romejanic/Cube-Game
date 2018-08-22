@@ -1,4 +1,9 @@
+# Eclipse
 Debug/
 .cproject/
-.project/
+.project
 .settings/
+
+# Binaries
+*.o
+cubegame

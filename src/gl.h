@@ -8,6 +8,7 @@
 #undef Window
 #endif
 
-#ifdef __mac__
-// TODO
+#if defined(__OSX__) || defined(__APPLE__)
+    #include <OpenGL/gl.h>
+    #include <OpenGL/gl3.h>
 #endif
