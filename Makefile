@@ -12,7 +12,7 @@ ifeq ($(OS), Darwin)
 endif
 ifeq ($(OS), Linux)
 	# Linux library flags
-	LIBS += -lglfw -lglm
+	LIBS += -lglfw -lGL
 endif
 
 all: main
