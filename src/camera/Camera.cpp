@@ -1,6 +1,7 @@
 #include <cmath>
 #include "Camera.h"
 #include "../Utils.h"
+#include "../Keys.h"
 
 Camera::Camera(float x, float y, float z) {
 	this->position = vec3(x, y, z);
@@ -35,6 +36,7 @@ void Camera::update(const Window& window, int w, int h) {
 	this->forward   = normalize(this->forward);
 
 	float moveSpeed = this->moveSpeed * window.getDelta();
+  // TODO: Keyboard handling probably shouldn't live in the Camera code.
 	if(window.isKeyDown(KEY_LSHIFT)) {
 		moveSpeed *= 2.0f;
 	}

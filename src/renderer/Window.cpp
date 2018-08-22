@@ -1,4 +1,11 @@
 #include "Window.h"
+#include <GLFW/glfw3.h>
+
+#define KEY_W GLFW_KEY_W
+#define KEY_A GLFW_KEY_A
+#define KEY_S GLFW_KEY_S
+#define KEY_D GLFW_KEY_D
+#define KEY_LSHIFT GLFW_KEY_LEFT_SHIFT
 
 bool Window::init(int w, int h, const char* title) {
 	this->width  = w;

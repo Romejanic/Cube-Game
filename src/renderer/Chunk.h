@@ -1,9 +1,7 @@
 #ifndef RENDERER_CHUNK_H_
 #define RENDERER_CHUNK_H_
 
-#include <OpenGL/gl.h>
-#include <OpenGL/gl3.h>
-
+#include "../gl.h"
 #include "../world/World.h"
 #include "../world/Block.h"
 

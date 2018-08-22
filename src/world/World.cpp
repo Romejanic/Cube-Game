@@ -26,6 +26,10 @@ void World::generate() {
 	}
 }
 
+void World::destroy() {
+  delete [] blocks;
+}
+
 char World::getBlock(int x, int y, int z) const {
 	int idx = this->getBlockIndex(x, y, z);
 	if(idx < 0) {

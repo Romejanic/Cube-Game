@@ -9,6 +9,7 @@ private:
 public:
 	void init(int width, int height, int depth);
 	void generate();
+  void destroy();
 	int getWidth() const { return width; }
 	int getHeight() const { return height; }
 	int getDepth() const { return depth; }
