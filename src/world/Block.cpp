@@ -10,7 +10,7 @@ Block::Block(char id, std::string name) {
 	this->name = name;
 }
 
-void Block::generateGeometry(World world, std::vector<float>* vertices, int x, int y, int z) {
+void Block::generateGeometry(const World& world, std::vector<float>* vertices, int x, int y, int z) {
 	vertices->push_back(x);
 	vertices->push_back(y);
 	vertices->push_back(z);

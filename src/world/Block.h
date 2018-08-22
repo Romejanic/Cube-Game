@@ -19,7 +19,7 @@ public:
 	char getID() const { return id; }
 	std::string getName() const { return name; }
 
-	void generateGeometry(World world, std::vector<float>* vertices, int x, int y, int z);
+	void generateGeometry(const World& world, std::vector<float>* vertices, int x, int y, int z);
 };
 
 #endif
