@@ -7,7 +7,7 @@ Make sure you have Xcode installed to access the dev tools.
 ```shell
 git clone https://github.com/Romejanic/Cube-Game.git
 cd Cube-Game
-brew install glfw3 glm
+brew install glfw glm
 make
 ```
 
