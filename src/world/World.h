@@ -22,6 +22,12 @@ private:
 	};
 
 public:
+  World() {}
+
+  // Disallow copy.
+  World(const World&) = delete;
+  World& operator=(const World&) = delete;
+
 	void init();
 	void generate();
   	void destroy();
