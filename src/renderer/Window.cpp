@@ -1,3 +1,5 @@
+#define GLFW_INCLUDE_NONE // stop GLFW from including OpenGL headers
+
 #include "Window.h"
 #include <GLFW/glfw3.h>
 

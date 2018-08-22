@@ -9,6 +9,7 @@
 #endif
 
 #if defined(__OSX__) || defined(__APPLE__)
-    #include <OpenGL/gl.h>
     #include <OpenGL/gl3.h>
 #endif
+
+#define GLFW_INCLUDE_NONE // stop GLFW from including OpenGL headers

@@ -1,6 +1,5 @@
 #include "WorldRenderer.h"
 #include <iostream>
-#include <GLFW/glfw3.h>
 
 void WorldRenderer::init(World world) {
 	this->world   = world;
