@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Renderer.h"
 
-void Renderer::init(const World& world) {
+void Renderer::init(World* world) {
 	glClearColor(0.4, 0.6, 0.9, 1.0);
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_CULL_FACE);

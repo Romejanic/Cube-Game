@@ -12,11 +12,11 @@ int main() {
 		win.destroy();
 		return -1;
 	}
-	World world;
+	World* world = new World;
 	Renderer renderer;
 	Camera camera(0, 0, 3);
 
-	world.init();
+	world->init();
 	renderer.init(world);
 
 	win.setCursorLocked(true);
@@ -30,6 +30,7 @@ int main() {
 
 	renderer.destroy();
 	win.destroy();
-  world.destroy();
+  world->destroy();
+  delete world;
 	return 0;
 }
