@@ -16,7 +16,7 @@ int main() {
 	Renderer renderer;
 	Camera camera(0, 0, 3);
 
-	world.init(256, 256, 256);
+	world.init();
 	renderer.init(world);
 
 	win.setCursorLocked(true);

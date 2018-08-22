@@ -1,5 +1,5 @@
 CXX?=clang
-CXXFLAGS?=-Wall
+CXXFLAGS?=-Wall -std=c++11
 
 LIBS=
 BINARY_NAME=cubegame

@@ -1,23 +1,44 @@
 #ifndef WORLD_WORLD_H_
 #define WORLD_WORLD_H_
 
+#include <cassert>
+
+constexpr int wWidth  = 256;
+constexpr int wHeight = 256;
+constexpr int wDepth  = 256;
+
 class World {
 private:
-	char* blocks;
-	int width, height, depth, blockCount;
+	char blocks[wWidth][wHeight][wDepth];
+
+	// debug only
+	void checkBlockBounds(int x, int y, int z) const {
+		assert(x >= 0 && x < wWidth);
+		assert(y >= 0 && y < wHeight);
+		assert(z >= 0 && z < wDepth);
+	};
 
 public:
-	void init(int width, int height, int depth);
+	void init();
 	void generate();
-  void destroy();
-	int getWidth() const { return width; }
-	int getHeight() const { return height; }
-	int getDepth() const { return depth; }
+  	void destroy();
+	// these are kinda pointless now, leaving them so i don't break anything
+	// probably should be removed later
+	int getWidth() const { return wWidth; }
+	int getHeight() const { return wHeight; }
+	int getDepth() const { return wDepth; }
 
-	char getBlock(int x, int y, int z) const;
-	void setBlock(int x, int y, int z, char id);
-	int getBlockIndex(int x, int y, int z) const;
-	bool isBlockAir(int x, int y, int z) const;
+	char getBlock(int x, int y, int z) const {
+	 	checkBlockBounds(x, y, z);
+		return blocks[x][y][z];	
+	};
+	void setBlock(int x, int y, int z, char id) {
+	 	checkBlockBounds(x, y, z);
+		blocks[x][y][z] = id;
+	};
+	bool isBlockAir(int x, int y, int z) const {
+		return getBlock(x, y, z) == 0;	
+	};
 };
 
 #endif
